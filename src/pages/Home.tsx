@@ -40,6 +40,11 @@ export function Home() {
                 return;
             }
 
+            if (snapshot.val().endedAt) {
+                alert('A sala já foi encerrada')
+                return;
+            }
+
             history.push(`/rooms/${roomCode}`)
         })
 
